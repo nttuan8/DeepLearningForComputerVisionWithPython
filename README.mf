@@ -1,0 +1,1 @@
+Some practical algorithm of computer vision in deep learning by Python
