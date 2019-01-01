@@ -15,14 +15,3 @@ class SimplePreprocessor:
     
     def preprocess(self, image):
         return cv2.resize(image, (self.width, self.heigth), interpolation=self.inter)
-    
-    
-def add(a,b):
-    return a+b
-
-class Test:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
-    def add(self):
-        return self.a+self.b
