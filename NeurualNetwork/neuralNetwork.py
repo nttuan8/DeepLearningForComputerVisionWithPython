@@ -76,10 +76,10 @@ class NeuralNetwork:
         
         
 #perceptron xor -> solve non-linear problem
-X = np.array([[0,0], [0,1], [1,0], [1,1]])
-y = np.array([0,1,1,0])
-p = NeuralNetwork([2, 2, 1], 1)
-p.fit(X, y, 20000, 100)
-for (x, target) in zip(X, y):
-    predict = p.predict(x)
-    print('[INFO] Data = {}, ground-truth: {}, predict: {}'.format(x, target, predict))
+#X = np.array([[0,0], [0,1], [1,0], [1,1]])
+#y = np.array([0,1,1,0])
+#p = NeuralNetwork([2, 2, 1], 1)
+#p.fit(X, y, 20000, 100)
+#for (x, target) in zip(X, y):
+#    predict = p.predict(x)
+#    print('[INFO] Data = {}, ground-truth: {}, predict: {}'.format(x, target, predict))
