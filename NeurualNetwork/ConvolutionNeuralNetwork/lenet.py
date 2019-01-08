@@ -33,7 +33,7 @@ class LeNet:
         model.add(Flatten())
         model.add(Dense(500))
         model.add(Activation('tanh'))
-        model.add(Dense(10))
+        model.add(Dense(classes))
         model.add(Activation('softmax'))
         
         return model

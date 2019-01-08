@@ -13,4 +13,4 @@ class ImageToArrayProcessor:
         self.dataFormat = dataFormat
         
     def preprocess(self, image):
-        return img_to_array(image, data_format=self.data_format)
+        return img_to_array(image)

@@ -40,6 +40,6 @@ class MiniVGGNet:
         model.add(Dense(512, activation='relu'))
         model.add(BatchNormalization())
         model.add(Dropout(0.5))
-        model.add(Dense(10, activation='softmax'))
+        model.add(Dense(classes, activation='softmax'))
         
         return model
