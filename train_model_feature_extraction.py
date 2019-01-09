@@ -21,4 +21,4 @@ print('Best parameter for the model {}'.format(model.best_params_))
 
 # Evaluate
 preds = model.predict(db["features"][i:])
-print(classification_report(db["labels"][i:], preds, target_names=db["label_names"]))
+print(classification_report(db["labels"][i:], preds))
