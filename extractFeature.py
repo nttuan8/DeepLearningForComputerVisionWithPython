@@ -17,7 +17,7 @@ import numpy as np
 import random
 import os
 
-image_path = list(paths.list_images('Dataset/train'))
+image_path = list(paths.list_images('Dataset/oxfordflower17/jpg'))
 random.shuffle(image_path)
 
 labels = [p.split(os.path.sep)[-2] for p in image_path]
@@ -26,7 +26,7 @@ labels = le.fit_transform(labels)
 
 model = VGG16(weights='imagenet', include_top=False)
 
-dataset = HDF5DatasetWrite(dims=(len(image_path), 512*7*7) , outputPath='output.hdf5', dataKey='features', buffSize=100)
+dataset = HDF5DatasetWrite(dims=(len(image_path), 512*7*7) , outputPath='Dataset/oxfordflower17/hdf5/output.hdf5', dataKey='features', buffSize=100)
 dataset.storeClassLabel(le.classes_)
 
 # batch_size=32
