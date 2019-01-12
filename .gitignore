@@ -107,3 +107,5 @@ venv.bak/
 *.zip
 *.JPEG
 *.txt
+*.png
+Callbacks/Outputs/2412.json

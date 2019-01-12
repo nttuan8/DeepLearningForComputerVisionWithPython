@@ -40,8 +40,8 @@ class TrainingMonitor(BaseLogger):
             f = open(self.jsonPath, 'w')
             f.write(json.dumps(self.H))
             f.close()
-
-        if True:
+        plt.ioff()
+        if len(self.H['loss']) > 1:
             numOfEpoch = len(self.H['loss'])
             plt.plot(np.arange(0, numOfEpoch), self.H['loss'], label='training loss')
             plt.plot(np.arange(0, numOfEpoch), self.H['val_loss'], label='validation loss')
