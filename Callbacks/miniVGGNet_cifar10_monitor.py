@@ -40,8 +40,9 @@ numOfEpoch = 10
 model = MiniVGGNet.build(32, 32, 3, 10)
 model.compile(SGD(lr=0.01, momentum=0.9, nesterov=True), 'categorical_crossentropy', ['accuracy'])
 
-folPath = 'Outputs'
-jsonPath = os.path.sep.join([folPath, '{}.json'.format(os.getpid())])
+outFolder = 'Outputs'
+folPath = os.path.sep.join([outFolder, '{}.png'.format(os.getpid())])
+jsonPath = os.path.sep.join([outFolder, '{}.json'.format(os.getpid())])
 
 callbacks = [TrainingMonitor(folPath, jsonPath)]
 

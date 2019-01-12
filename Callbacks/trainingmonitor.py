@@ -29,8 +29,6 @@ class TrainingMonitor(BaseLogger):
                         self.H[k] = self.H[k][:self.startAt]
                         
     def on_epoch_end(self, epoch, logs={}):
-        print("absdfasdfasdf")
-        print(logs)
         for (k,v) in logs.items():
             l = self.H.get(k, [])
             l.append(v)
@@ -52,6 +50,6 @@ class TrainingMonitor(BaseLogger):
             plt.ylabel('Loss|Accuracy')
             plt.legend()
             
-            figPath = os.path.sep.join([self.figPath, '{}.png'.format(epoch)])
-            plt.savefig(figPath)
+            #figPath = os.path.sep.join([self.figPath, '{}.png'.format(epoch)])
+            plt.savefig(self.figPath)
             plt.close()
